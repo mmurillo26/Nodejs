@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include partials/header
+    body.login
+        .contenedor-formulario
+            h1 Restore Password
+
+            p Insert your email to restore your password
+
+            if locals.messages
+                .alertas
+                    each categoria in Object.keys(locals.messages)
+                        each error in messages[categoria]
+                            .alerta(class=`${categoria}`)
+                                p= error
+
+            form#form.caja.caja-login(method="POST")
+                .campo
+                    label(for="email") Email:
+                    input(type="email" name="email" placeholder="your email" value= email)
+                .campo.enviar
+                    input.boton(type="submit" value="Restore Password")
+                .campo.acciones
+                    a(href="/login") Back to Login
