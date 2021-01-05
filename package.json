@@ -11,7 +11,7 @@
   "author": "Mario Murillo",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bcrypt-nodejs": "0.0.3",
     "chalk": "^3.0.0",
     "concurrently": "^5.1.0",
